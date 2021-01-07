@@ -1,0 +1,2049 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="11/24/2020 8:19:29 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-AM2FK9D"
+  DTS:CreatorName="DESKTOP-AM2FK9D\ASUS"
+  DTS:DTSID="{0607BC48-0478-4B81-92D7-C7272C352D9D}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.128"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="3"
+  DTS:VersionGUID="{35625CBE-8A59-45A3-8623-B8528E64915E}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-AM2FK9D\MBSI.YellowTaxiStage]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{C1A91932-9492-46F6-9349-EC5C88785A9F}"
+      DTS:ObjectName="DESKTOP-AM2FK9D\MBSI.YellowTaxiStage">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DESKTOP-AM2FK9D\MBSI;Initial Catalog=YellowTaxiStage;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{B28E0A9F-D64C-466B-8065-1B3ECBF6AC68}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="E:\nyc_taxi_data.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="vendor_id"
+              DTS:DTSID="{EB9C7FC0-B10A-4E45-ADC5-CC7734622E5D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="pickup_datetime"
+              DTS:DTSID="{EE1BB62B-113F-4771-B92B-1AE144C418FA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="dropoff_datetime"
+              DTS:DTSID="{21A89F7E-C7DE-4743-99B9-527D1449F9FF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="passenger_count"
+              DTS:DTSID="{9C237534-D9E7-491D-88A3-74BED3B65136}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="trip_distance"
+              DTS:DTSID="{603C43D1-E8A4-4CF9-812B-E08EA8F49DD8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="pickup_longitude"
+              DTS:DTSID="{4FC168F5-2D7D-4D9E-A3E2-784C350AE770}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="pickup_latitude"
+              DTS:DTSID="{FEAC801B-428C-4651-8584-74FADAC5699D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="rate_code"
+              DTS:DTSID="{C0D91691-E78F-4A9F-B63E-5A3E1AE090CD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="store_and_fwd_flag"
+              DTS:DTSID="{4AF16F80-656E-4F57-A10F-C5DAE4100A89}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="dropoff_longitude"
+              DTS:DTSID="{8860F9C4-A9EC-48C1-A6D6-6329CA9D2CCF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="dropoff_latitude"
+              DTS:DTSID="{392560B7-66D3-473C-85D4-B75700329ACC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="payment_type"
+              DTS:DTSID="{7B80427F-0E0E-454A-9BD7-8CDE66A9CB63}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fare_amount"
+              DTS:DTSID="{A62A91B7-96BF-4DB2-AABA-A3FB46625EB5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="surcharge"
+              DTS:DTSID="{39C944D1-C29C-442A-93B4-2973FB99AC5B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="mta_tax"
+              DTS:DTSID="{C9B82A3E-9D84-45DE-9A87-C6E08ED666E1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="tip_amount"
+              DTS:DTSID="{72BF6A03-3478-49E6-B435-4486120AF286}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="tolls_amount"
+              DTS:DTSID="{F9785E9D-2A47-49F7-A5A5-50557BFB9456}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="total_amount"
+              DTS:DTSID="{63759082-1E3C-47AC-9663-27ACF86E1D43}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{2F42FEFB-6AD5-4616-BFCF-AF3DB148CA1F}"
+      DTS:ObjectName="Flat File Connection Manager 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="E:\YellowTaxi_data\nyct2010.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="the_geom"
+              DTS:DTSID="{298EECE8-FF9F-474C-92D5-F626F0F6677E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CTLabel"
+              DTS:DTSID="{4DA84CB6-05E7-45A3-AC3F-7ABEEEFF4DFF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="BoroName"
+              DTS:DTSID="{AD939CFF-3FC2-49EB-A57A-CE6C31345AF0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="BoroCode"
+              DTS:DTSID="{9F633C2C-FF18-4D09-9091-E9E4D5DC8CCD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CT2010"
+              DTS:DTSID="{642C3D05-2647-4CB7-8851-4698A460545A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="BoroCT2010"
+              DTS:DTSID="{D2F20B8C-EC8E-43F6-AF4B-A0A5210649F3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CDEligibil"
+              DTS:DTSID="{4D38F313-E5F8-4398-9388-3099435A6E5C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NTACode"
+              DTS:DTSID="{37C453AE-83CF-4853-BB0F-1A3D7F6A65E5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NTAName"
+              DTS:DTSID="{950EBA79-784E-46D6-9F04-612BDBE77F46}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PUMA"
+              DTS:DTSID="{31E5194B-B455-493A-846E-F63441F2988C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Shape_Leng"
+              DTS:DTSID="{0CAF1AD8-57A3-4F93-A237-49069F6398DD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Shape_Area"
+              DTS:DTSID="{B98882E9-CDC6-419E-8A8A-B4E257A29626}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{B65B2CC7-0B9E-4DA0-8CCB-34348A2A6A9A}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task\Census Tract 2010 file"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Census Tract 2010 file"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Census Tract 2010 file.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Output].Columns[the_geom]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Output].ExternalColumns[the_geom]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Output].Columns[the_geom]"
+                      name="the_geom"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Output].Columns[CTLabel]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Output].ExternalColumns[CTLabel]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Output].Columns[CTLabel]"
+                      name="CTLabel"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Output].Columns[BoroName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Output].ExternalColumns[BoroName]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Output].Columns[BoroName]"
+                      name="BoroName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Output].Columns[BoroCode]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Output].ExternalColumns[BoroCode]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Output].Columns[BoroCode]"
+                      name="BoroCode"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Output].Columns[CT2010]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Output].ExternalColumns[CT2010]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Output].Columns[CT2010]"
+                      name="CT2010"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Output].Columns[BoroCT2010]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Output].ExternalColumns[BoroCT2010]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Output].Columns[BoroCT2010]"
+                      name="BoroCT2010"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Output].Columns[CDEligibil]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Output].ExternalColumns[CDEligibil]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Output].Columns[CDEligibil]"
+                      name="CDEligibil"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Output].Columns[NTACode]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Output].ExternalColumns[NTACode]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Output].Columns[NTACode]"
+                      name="NTACode"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Output].Columns[NTAName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Output].ExternalColumns[NTAName]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Output].Columns[NTAName]"
+                      name="NTAName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Output].Columns[PUMA]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Output].ExternalColumns[PUMA]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Output].Columns[PUMA]"
+                      name="PUMA"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Output].Columns[Shape_Leng]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Output].ExternalColumns[Shape_Leng]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Output].Columns[Shape_Leng]"
+                      name="Shape_Leng"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Output].Columns[Shape_Area]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Output].ExternalColumns[Shape_Area]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Output].Columns[Shape_Area]"
+                      name="Shape_Area"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Output].ExternalColumns[the_geom]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="the_geom" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Output].ExternalColumns[CTLabel]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CTLabel" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Output].ExternalColumns[BoroName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="BoroName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Output].ExternalColumns[BoroCode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="BoroCode" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Output].ExternalColumns[CT2010]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CT2010" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Output].ExternalColumns[BoroCT2010]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="BoroCT2010" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Output].ExternalColumns[CDEligibil]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="CDEligibil" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Output].ExternalColumns[NTACode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="NTACode" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Output].ExternalColumns[NTAName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="NTAName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Output].ExternalColumns[PUMA]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="PUMA" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Output].ExternalColumns[Shape_Leng]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Shape_Leng" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Output].ExternalColumns[Shape_Area]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Shape_Area" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Census_Tract_stage"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Census_Tract_stage"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Census_Block_stage]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Census_Tract_stage.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-AM2FK9D\MBSI.YellowTaxiStage]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-AM2FK9D\MBSI.YellowTaxiStage]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Census_Tract_stage.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Census_Tract_stage.Inputs[OLE DB Destination Input].Columns[the_geom]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="the_geom"
+                      externalMetadataColumnId="Package\Data Flow Task\Census_Tract_stage.Inputs[OLE DB Destination Input].ExternalColumns[the_geom]"
+                      lineageId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Output].Columns[the_geom]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Census_Tract_stage.Inputs[OLE DB Destination Input].Columns[CTLabel]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CTLabel"
+                      externalMetadataColumnId="Package\Data Flow Task\Census_Tract_stage.Inputs[OLE DB Destination Input].ExternalColumns[CTLabel]"
+                      lineageId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Output].Columns[CTLabel]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Census_Tract_stage.Inputs[OLE DB Destination Input].Columns[BoroName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="BoroName"
+                      externalMetadataColumnId="Package\Data Flow Task\Census_Tract_stage.Inputs[OLE DB Destination Input].ExternalColumns[BoroName]"
+                      lineageId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Output].Columns[BoroName]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Census_Tract_stage.Inputs[OLE DB Destination Input].Columns[BoroCode]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="BoroCode"
+                      externalMetadataColumnId="Package\Data Flow Task\Census_Tract_stage.Inputs[OLE DB Destination Input].ExternalColumns[BoroCode]"
+                      lineageId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Output].Columns[BoroCode]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Census_Tract_stage.Inputs[OLE DB Destination Input].Columns[CT2010]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CT2010"
+                      externalMetadataColumnId="Package\Data Flow Task\Census_Tract_stage.Inputs[OLE DB Destination Input].ExternalColumns[CT2010]"
+                      lineageId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Output].Columns[CT2010]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Census_Tract_stage.Inputs[OLE DB Destination Input].Columns[BoroCT2010]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="BoroCT2010"
+                      externalMetadataColumnId="Package\Data Flow Task\Census_Tract_stage.Inputs[OLE DB Destination Input].ExternalColumns[BoroCT2010]"
+                      lineageId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Output].Columns[BoroCT2010]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Census_Tract_stage.Inputs[OLE DB Destination Input].Columns[CDEligibil]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CDEligibil"
+                      externalMetadataColumnId="Package\Data Flow Task\Census_Tract_stage.Inputs[OLE DB Destination Input].ExternalColumns[CDEligibil]"
+                      lineageId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Output].Columns[CDEligibil]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Census_Tract_stage.Inputs[OLE DB Destination Input].Columns[NTACode]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="NTACode"
+                      externalMetadataColumnId="Package\Data Flow Task\Census_Tract_stage.Inputs[OLE DB Destination Input].ExternalColumns[NTACode]"
+                      lineageId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Output].Columns[NTACode]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Census_Tract_stage.Inputs[OLE DB Destination Input].Columns[NTAName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="NTAName"
+                      externalMetadataColumnId="Package\Data Flow Task\Census_Tract_stage.Inputs[OLE DB Destination Input].ExternalColumns[NTAName]"
+                      lineageId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Output].Columns[NTAName]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Census_Tract_stage.Inputs[OLE DB Destination Input].Columns[PUMA]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="PUMA"
+                      externalMetadataColumnId="Package\Data Flow Task\Census_Tract_stage.Inputs[OLE DB Destination Input].ExternalColumns[PUMA]"
+                      lineageId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Output].Columns[PUMA]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Census_Tract_stage.Inputs[OLE DB Destination Input].Columns[Shape_Leng]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Shape_Leng"
+                      externalMetadataColumnId="Package\Data Flow Task\Census_Tract_stage.Inputs[OLE DB Destination Input].ExternalColumns[Shape_Leng]"
+                      lineageId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Output].Columns[Shape_Leng]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Census_Tract_stage.Inputs[OLE DB Destination Input].Columns[Shape_Area]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Shape_Area"
+                      externalMetadataColumnId="Package\Data Flow Task\Census_Tract_stage.Inputs[OLE DB Destination Input].ExternalColumns[Shape_Area]"
+                      lineageId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Output].Columns[Shape_Area]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Census_Tract_stage.Inputs[OLE DB Destination Input].ExternalColumns[the_geom]"
+                      codePage="1252"
+                      dataType="str"
+                      length="6000"
+                      name="the_geom" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Census_Tract_stage.Inputs[OLE DB Destination Input].ExternalColumns[CTLabel]"
+                      dataType="r8"
+                      name="CTLabel" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Census_Tract_stage.Inputs[OLE DB Destination Input].ExternalColumns[BoroName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="BoroName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Census_Tract_stage.Inputs[OLE DB Destination Input].ExternalColumns[BoroCode]"
+                      dataType="i4"
+                      name="BoroCode" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Census_Tract_stage.Inputs[OLE DB Destination Input].ExternalColumns[CT2010]"
+                      dataType="i4"
+                      name="CT2010" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Census_Tract_stage.Inputs[OLE DB Destination Input].ExternalColumns[BoroCT2010]"
+                      dataType="i4"
+                      name="BoroCT2010" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Census_Tract_stage.Inputs[OLE DB Destination Input].ExternalColumns[CDEligibil]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="CDEligibil" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Census_Tract_stage.Inputs[OLE DB Destination Input].ExternalColumns[NTACode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="NTACode" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Census_Tract_stage.Inputs[OLE DB Destination Input].ExternalColumns[NTAName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="NTAName" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Census_Tract_stage.Inputs[OLE DB Destination Input].ExternalColumns[PUMA]"
+                      dataType="i4"
+                      name="PUMA" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Census_Tract_stage.Inputs[OLE DB Destination Input].ExternalColumns[Shape_Leng]"
+                      dataType="r8"
+                      name="Shape_Leng" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Census_Tract_stage.Inputs[OLE DB Destination Input].ExternalColumns[Shape_Area]"
+                      dataType="r8"
+                      name="Shape_Area" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Census_Tract_stage.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\Census_Tract_stage.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Census_Tract_stage.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Census_Tract_stage.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Census_Tract_stage.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Census_Tract_stage.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Yellow_Taxi_2014 file"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Yellow_Taxi_2014 file"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Yellow_Taxi_2014 file.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].Columns[vendor_id]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].ExternalColumns[vendor_id]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].Columns[vendor_id]"
+                      name="vendor_id"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].Columns[pickup_datetime]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].ExternalColumns[pickup_datetime]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].Columns[pickup_datetime]"
+                      name="pickup_datetime"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].Columns[dropoff_datetime]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].ExternalColumns[dropoff_datetime]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].Columns[dropoff_datetime]"
+                      name="dropoff_datetime"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].Columns[passenger_count]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].ExternalColumns[passenger_count]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].Columns[passenger_count]"
+                      name="passenger_count"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].Columns[trip_distance]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].ExternalColumns[trip_distance]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].Columns[trip_distance]"
+                      name="trip_distance"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].Columns[pickup_longitude]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].ExternalColumns[pickup_longitude]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].Columns[pickup_longitude]"
+                      name="pickup_longitude"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].Columns[pickup_latitude]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].ExternalColumns[pickup_latitude]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].Columns[pickup_latitude]"
+                      name="pickup_latitude"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].Columns[rate_code]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].ExternalColumns[rate_code]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].Columns[rate_code]"
+                      name="rate_code"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].Columns[store_and_fwd_flag]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].ExternalColumns[store_and_fwd_flag]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].Columns[store_and_fwd_flag]"
+                      name="store_and_fwd_flag"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].Columns[dropoff_longitude]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].ExternalColumns[dropoff_longitude]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].Columns[dropoff_longitude]"
+                      name="dropoff_longitude"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].Columns[dropoff_latitude]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].ExternalColumns[dropoff_latitude]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].Columns[dropoff_latitude]"
+                      name="dropoff_latitude"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].Columns[payment_type]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].ExternalColumns[payment_type]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].Columns[payment_type]"
+                      name="payment_type"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].Columns[fare_amount]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].ExternalColumns[fare_amount]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].Columns[fare_amount]"
+                      name="fare_amount"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].Columns[surcharge]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].ExternalColumns[surcharge]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].Columns[surcharge]"
+                      name="surcharge"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].Columns[mta_tax]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].ExternalColumns[mta_tax]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].Columns[mta_tax]"
+                      name="mta_tax"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].Columns[tip_amount]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].ExternalColumns[tip_amount]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].Columns[tip_amount]"
+                      name="tip_amount"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].Columns[tolls_amount]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].ExternalColumns[tolls_amount]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].Columns[tolls_amount]"
+                      name="tolls_amount"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].Columns[total_amount]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].ExternalColumns[total_amount]"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].Columns[total_amount]"
+                      name="total_amount"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].ExternalColumns[vendor_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="vendor_id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].ExternalColumns[pickup_datetime]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="pickup_datetime" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].ExternalColumns[dropoff_datetime]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="dropoff_datetime" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].ExternalColumns[passenger_count]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="passenger_count" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].ExternalColumns[trip_distance]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="trip_distance" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].ExternalColumns[pickup_longitude]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="pickup_longitude" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].ExternalColumns[pickup_latitude]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="pickup_latitude" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].ExternalColumns[rate_code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="rate_code" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].ExternalColumns[store_and_fwd_flag]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="store_and_fwd_flag" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].ExternalColumns[dropoff_longitude]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="dropoff_longitude" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].ExternalColumns[dropoff_latitude]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="dropoff_latitude" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].ExternalColumns[payment_type]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="payment_type" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].ExternalColumns[fare_amount]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="fare_amount" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].ExternalColumns[surcharge]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="surcharge" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].ExternalColumns[mta_tax]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="mta_tax" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].ExternalColumns[tip_amount]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="tip_amount" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].ExternalColumns[tolls_amount]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="tolls_amount" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].ExternalColumns[total_amount]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="total_amount" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Yellow_Taxi_stage"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Yellow_Taxi_stage"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Yellow_Taxi_stage]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Yellow_Taxi_stage.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-AM2FK9D\MBSI.YellowTaxiStage]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-AM2FK9D\MBSI.YellowTaxiStage]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Yellow_Taxi_stage.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_stage.Inputs[OLE DB Destination Input].Columns[vendor_id]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="vendor_id"
+                      externalMetadataColumnId="Package\Data Flow Task\Yellow_Taxi_stage.Inputs[OLE DB Destination Input].ExternalColumns[vendor_id]"
+                      lineageId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].Columns[vendor_id]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_stage.Inputs[OLE DB Destination Input].Columns[pickup_datetime]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="pickup_datetime"
+                      externalMetadataColumnId="Package\Data Flow Task\Yellow_Taxi_stage.Inputs[OLE DB Destination Input].ExternalColumns[pickup_datetime]"
+                      lineageId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].Columns[pickup_datetime]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_stage.Inputs[OLE DB Destination Input].Columns[dropoff_datetime]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="dropoff_datetime"
+                      externalMetadataColumnId="Package\Data Flow Task\Yellow_Taxi_stage.Inputs[OLE DB Destination Input].ExternalColumns[dropoff_datetime]"
+                      lineageId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].Columns[dropoff_datetime]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_stage.Inputs[OLE DB Destination Input].Columns[passenger_count]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="passenger_count"
+                      externalMetadataColumnId="Package\Data Flow Task\Yellow_Taxi_stage.Inputs[OLE DB Destination Input].ExternalColumns[passenger_count]"
+                      lineageId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].Columns[passenger_count]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_stage.Inputs[OLE DB Destination Input].Columns[trip_distance]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="trip_distance"
+                      externalMetadataColumnId="Package\Data Flow Task\Yellow_Taxi_stage.Inputs[OLE DB Destination Input].ExternalColumns[trip_distance]"
+                      lineageId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].Columns[trip_distance]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_stage.Inputs[OLE DB Destination Input].Columns[pickup_longitude]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="pickup_longitude"
+                      externalMetadataColumnId="Package\Data Flow Task\Yellow_Taxi_stage.Inputs[OLE DB Destination Input].ExternalColumns[pickup_longitude]"
+                      lineageId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].Columns[pickup_longitude]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_stage.Inputs[OLE DB Destination Input].Columns[pickup_latitude]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="pickup_latitude"
+                      externalMetadataColumnId="Package\Data Flow Task\Yellow_Taxi_stage.Inputs[OLE DB Destination Input].ExternalColumns[pickup_latitude]"
+                      lineageId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].Columns[pickup_latitude]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_stage.Inputs[OLE DB Destination Input].Columns[rate_code]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="rate_code"
+                      externalMetadataColumnId="Package\Data Flow Task\Yellow_Taxi_stage.Inputs[OLE DB Destination Input].ExternalColumns[rate_code]"
+                      lineageId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].Columns[rate_code]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_stage.Inputs[OLE DB Destination Input].Columns[store_and_fwd_flag]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="store_and_fwd_flag"
+                      externalMetadataColumnId="Package\Data Flow Task\Yellow_Taxi_stage.Inputs[OLE DB Destination Input].ExternalColumns[store_and_fwd_flag]"
+                      lineageId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].Columns[store_and_fwd_flag]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_stage.Inputs[OLE DB Destination Input].Columns[dropoff_longitude]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="dropoff_longitude"
+                      externalMetadataColumnId="Package\Data Flow Task\Yellow_Taxi_stage.Inputs[OLE DB Destination Input].ExternalColumns[dropoff_longitude]"
+                      lineageId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].Columns[dropoff_longitude]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_stage.Inputs[OLE DB Destination Input].Columns[dropoff_latitude]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="dropoff_latitude"
+                      externalMetadataColumnId="Package\Data Flow Task\Yellow_Taxi_stage.Inputs[OLE DB Destination Input].ExternalColumns[dropoff_latitude]"
+                      lineageId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].Columns[dropoff_latitude]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_stage.Inputs[OLE DB Destination Input].Columns[payment_type]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="payment_type"
+                      externalMetadataColumnId="Package\Data Flow Task\Yellow_Taxi_stage.Inputs[OLE DB Destination Input].ExternalColumns[payment_type]"
+                      lineageId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].Columns[payment_type]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_stage.Inputs[OLE DB Destination Input].Columns[fare_amount]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="fare_amount"
+                      externalMetadataColumnId="Package\Data Flow Task\Yellow_Taxi_stage.Inputs[OLE DB Destination Input].ExternalColumns[fare_amount]"
+                      lineageId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].Columns[fare_amount]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_stage.Inputs[OLE DB Destination Input].Columns[surcharge]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="surcharge"
+                      externalMetadataColumnId="Package\Data Flow Task\Yellow_Taxi_stage.Inputs[OLE DB Destination Input].ExternalColumns[surcharge]"
+                      lineageId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].Columns[surcharge]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_stage.Inputs[OLE DB Destination Input].Columns[mta_tax]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="mta_tax"
+                      externalMetadataColumnId="Package\Data Flow Task\Yellow_Taxi_stage.Inputs[OLE DB Destination Input].ExternalColumns[mta_tax]"
+                      lineageId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].Columns[mta_tax]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_stage.Inputs[OLE DB Destination Input].Columns[tip_amount]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="tip_amount"
+                      externalMetadataColumnId="Package\Data Flow Task\Yellow_Taxi_stage.Inputs[OLE DB Destination Input].ExternalColumns[tip_amount]"
+                      lineageId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].Columns[tip_amount]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_stage.Inputs[OLE DB Destination Input].Columns[tolls_amount]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="tolls_amount"
+                      externalMetadataColumnId="Package\Data Flow Task\Yellow_Taxi_stage.Inputs[OLE DB Destination Input].ExternalColumns[tolls_amount]"
+                      lineageId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].Columns[tolls_amount]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_stage.Inputs[OLE DB Destination Input].Columns[total_amount]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="total_amount"
+                      externalMetadataColumnId="Package\Data Flow Task\Yellow_Taxi_stage.Inputs[OLE DB Destination Input].ExternalColumns[total_amount]"
+                      lineageId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output].Columns[total_amount]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_stage.Inputs[OLE DB Destination Input].ExternalColumns[vendor_id]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      name="vendor_id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_stage.Inputs[OLE DB Destination Input].ExternalColumns[pickup_datetime]"
+                      dataType="dbTimeStamp2"
+                      name="pickup_datetime"
+                      scale="7" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_stage.Inputs[OLE DB Destination Input].ExternalColumns[dropoff_datetime]"
+                      dataType="dbTimeStamp2"
+                      name="dropoff_datetime"
+                      scale="7" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_stage.Inputs[OLE DB Destination Input].ExternalColumns[passenger_count]"
+                      dataType="i4"
+                      name="passenger_count" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_stage.Inputs[OLE DB Destination Input].ExternalColumns[trip_distance]"
+                      dataType="r8"
+                      name="trip_distance" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_stage.Inputs[OLE DB Destination Input].ExternalColumns[pickup_longitude]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="pickup_longitude" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_stage.Inputs[OLE DB Destination Input].ExternalColumns[pickup_latitude]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="pickup_latitude" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_stage.Inputs[OLE DB Destination Input].ExternalColumns[rate_code]"
+                      dataType="i4"
+                      name="rate_code" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_stage.Inputs[OLE DB Destination Input].ExternalColumns[store_and_fwd_flag]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="store_and_fwd_flag" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_stage.Inputs[OLE DB Destination Input].ExternalColumns[dropoff_longitude]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="dropoff_longitude" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_stage.Inputs[OLE DB Destination Input].ExternalColumns[dropoff_latitude]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="dropoff_latitude" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_stage.Inputs[OLE DB Destination Input].ExternalColumns[payment_type]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      name="payment_type" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_stage.Inputs[OLE DB Destination Input].ExternalColumns[fare_amount]"
+                      dataType="r8"
+                      name="fare_amount" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_stage.Inputs[OLE DB Destination Input].ExternalColumns[surcharge]"
+                      dataType="r8"
+                      name="surcharge" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_stage.Inputs[OLE DB Destination Input].ExternalColumns[mta_tax]"
+                      dataType="r8"
+                      name="mta_tax" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_stage.Inputs[OLE DB Destination Input].ExternalColumns[tip_amount]"
+                      dataType="r8"
+                      name="tip_amount" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_stage.Inputs[OLE DB Destination Input].ExternalColumns[tolls_amount]"
+                      dataType="r8"
+                      name="tolls_amount" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_stage.Inputs[OLE DB Destination Input].ExternalColumns[total_amount]"
+                      dataType="r8"
+                      name="total_amount" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Yellow_Taxi_stage.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task\Yellow_Taxi_stage.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_stage.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Yellow_Taxi_stage.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Yellow_Taxi_stage.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Yellow_Taxi_stage.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task.Paths[Flat File Source Output]"
+              endId="Package\Data Flow Task\Yellow_Taxi_stage.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Data Flow Task\Yellow_Taxi_2014 file.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Flat File Source Output1]"
+              endId="Package\Data Flow Task\Census_Tract_stage.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\Data Flow Task\Census Tract 2010 file.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\Data Flow Task"
+          TopLeft="266.428575965823,156.000002187841" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="180.8,41.6"
+          Id="Package\Data Flow Task\Yellow_Taxi_2014 file"
+          TopLeft="138.571430931286,45.8823535846591" />
+        <NodeLayout
+          Size="165.6,41.6"
+          Id="Package\Data Flow Task\Yellow_Taxi_stage"
+          TopLeft="143.571431016436,166.705884690928" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Flat File Source Output]"
+          TopLeft="227.671430973861,87.4823535846591">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,79.2235311062691"
+              Start="0,0"
+              End="0,71.7235311062691">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,71.7235311062691" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="183.2,41.6"
+          Id="Package\Data Flow Task\Census Tract 2010 file"
+          TopLeft="494.28572270335,55.8235301946686" />
+        <NodeLayout
+          Size="172.8,41.6"
+          Id="Package\Data Flow Task\Census_Tract_stage"
+          TopLeft="499.285722788499,174.352943621705" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Flat File Source Output1]"
+          TopLeft="585.785722745925,97.4235301946686">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,76.9294134270361"
+              Start="0,0"
+              End="0,69.4294134270361">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,69.4294134270361" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Yellow_Taxi_stage">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Census_Tract_stage">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
